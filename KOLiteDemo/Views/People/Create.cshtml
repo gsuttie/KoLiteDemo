@@ -1,0 +1,29 @@
+@model KOLiteDemo.Models.Person
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+    <fieldset>
+        <legend>Person</legend>
+        
+        <div id="main">   
+ 
+            <p>Address Line 1: <input data-bind='value: address1' /></p>
+            <p>Address Line 2: <input data-bind='value: address2' /></p>
+            <p>Address Line 3: <input data-bind='value: address3' /></p>
+            <p>Address Line 4: <input data-bind='value: address4' /></p>
+
+            <h2>Address 1, <span data-bind='text: address1'> </span>!</h2>  
+            <h2>Address 2, <span data-bind='text: address2'> </span>!</h2>  
+            <h2>Address 3, <span data-bind='text: address3'> </span>!</h2>  
+            <h2>Address 4, <span data-bind='text: address4'> </span>!</h2>  
+            
+            <input type="submit" value="Create" />
+        </div>
+        
+       <div data-bind="text: ko.toJSON($data)"></div>
+      
+    </fieldset>
